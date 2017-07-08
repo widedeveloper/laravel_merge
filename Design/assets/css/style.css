@@ -246,7 +246,7 @@ h6 {
 
 body {
     font-family: "Lato", Arial, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 25px;
     color: #777;
     overflow-x: hidden;
@@ -1444,7 +1444,9 @@ Top bar Type 5
 
 .nopadding-bottom,
 .alternate,
-.about_merge {
+.about_merge,
+.benefit,
+.request {
     padding: 0;
 }
 
@@ -1457,6 +1459,28 @@ Top bar Type 5
 .about_merge .aboutmerge {
     background: url(../../assets/images/main-parra.png) no-repeat;
     background-size: cover;
+    background-position: center;
+}
+
+.benefit .benefitmerge {
+    background: url(../../assets/images/Untitled-7.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bene-left {
+    background-color: rgba(30, 111, 212, 0.69) !important;
+    padding-left: 50px;
+}
+
+.request-left {
+    padding: 0 50px;
+}
+
+.request .requestmerge {
+    background: url(../../assets/images/Untitled-6-1.png) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 
