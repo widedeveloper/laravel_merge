@@ -1580,12 +1580,16 @@ Top bar Type 5
 .wpcf7 input[type=submit]:hover {
     background: #1e6fd4;
     color: #fff !important;
+    border: solid 1px #0b8a3e;
+    border-bottom: solid 2px #2d2929;
 }
 
 .wpcf7 input[type=submit] {
     background: #1ca436;
     color: #fff !important;
     width: 100%;
+    border: solid 1px #0b8a3e;
+    border-bottom: solid 2px #2d2929
 }
 
 
