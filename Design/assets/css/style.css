@@ -1566,8 +1566,26 @@ Top bar Type 5
 
 /*list style*/
 
+#ct_r1dvw53swu6wbag2kytv ul {
+    padding-left: 18px;
+}
+
 #ct_r1dvw53swu6wbag2kytv ul li {
     list-style-type: initial
+}
+
+
+/**/
+
+.wpcf7 input[type=submit]:hover {
+    background: #1e6fd4;
+    color: #fff !important;
+}
+
+.wpcf7 input[type=submit] {
+    background: #1ca436;
+    color: #fff !important;
+    width: 100%;
 }
 
 
