@@ -10085,14 +10085,18 @@ h3.mi_heading {
     cursor: pointer;
 }
 
+.wpb_text_column ol>li:hover:before {
+    background: #1ca436;
+}
+
 .wpb_text_column ol>li:before {
     display: inline-block;
     content: counter(item);
     counter-increment: item;
     margin-left: -10px;
-    width: 24px;
-    height: 24px;
-    background: #a1b1bc;
+    width: 30px;
+    height: 30px;
+    background: #242729;
     text-align: center;
     line-height: 24px;
     border: 3px solid rgba(255, 255, 255, 0.56);

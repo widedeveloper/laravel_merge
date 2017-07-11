@@ -1440,14 +1440,21 @@ Top bar Type 5
 .info-bar.info-bar-clean {
     background-color: #fff;
     border-bottom: none;
+    z-index: 1;
 }
 
 .nopadding-bottom,
 .alternate,
 .about_merge,
 .benefit,
-.request {
+.request,
+.client {
     padding: 0;
+}
+
+.client {
+    margin-top: -42px;
+    z-index: 0;
 }
 
 .alternate h2,
@@ -1462,7 +1469,8 @@ Top bar Type 5
     background-position: center;
 }
 
-.benefit .benefitmerge {
+.benefit .benefitmerge,
+.client .mergeclient {
     background: url(../../assets/images/Untitled-7.jpg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -1481,6 +1489,78 @@ Top bar Type 5
     background: url(../../assets/images/Untitled-6-1.png) no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+
+/*home page chart style*/
+
+.chart-container .pr-chart-ctrl,
+.chart-container .pr-chart-ctrl1 {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.chart-container .pr-chart-ctrl .pr-chart,
+.chart-container .pr-chart-ctrl1 .pr-chart {
+    display: block;
+    position: relative;
+    width: 70%;
+    margin: 0 0 20px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.chart-container .pr-chart-ctrl .pr-chart canvas,
+.chart-container .pr-chart-ctrl1 .pr-chart canvas {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    vertical-align: center;
+}
+
+.chart-container .pr-chart-ctrl .pr-chart i,
+.chart-container .pr-chart-ctrl1 .pr-chart i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    line-height: 200px;
+    font-size: 48px;
+    font-style: normal;
+    color: #808080;
+}
+
+.chart-container .pr-chart-ctrl p,
+.chart-container .pr-chart-ctrl1 p {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    color: gray;
+}
+
+@media screen and (max-width:500px) {
+    .chart-container .pr-chart-ctrl,
+    .chart-container .pr-chart-ctrl1 {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (min-width:501px) and (max-width:900px) {
+    .chart-container .pr-chart-ctrl,
+    .chart-container .pr-chart-ctrl1 {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+}
+
+
+/*tab style*/
+
+.tabbable-custom .tab-content .tab-pane {
+    padding: 20px;
 }
 
 
