@@ -1564,6 +1564,13 @@ Top bar Type 5
 }
 
 
+/*list style*/
+
+#ct_r1dvw53swu6wbag2kytv ul li {
+    list-style-type: initial
+}
+
+
 /*
 Header / Menu
 
