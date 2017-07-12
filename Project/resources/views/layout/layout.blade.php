@@ -113,82 +113,7 @@
                 </div>
             </div>
         </div>
-        <!-- Origin top bar
-			<div id="topBar">
-				<div class="container">
-
-					<!-- right ->
-					<ul class="top-links list-inline pull-right">
-						<li class="text-welcome hidden-xs">Welcome to Smarty, <strong>John Doe</strong></li>
-						<li>
-							<a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#"><i class="fa fa-user hidden-xs"></i> MY ACCOUNT</a>
-							<ul class="dropdown-menu pull-right">
-								<li><a tabindex="-1" href="#"><i class="fa fa-history"></i> ORDER HISTORY</a></li>
-								<li class="divider"></li>
-								<li><a tabindex="-1" href="#"><i class="fa fa-bookmark"></i> MY WISHLIST</a></li>
-								<li><a tabindex="-1" href="#"><i class="fa fa-edit"></i> MY REVIEWS</a></li>
-								<li><a tabindex="-1" href="#"><i class="fa fa-cog"></i> MY SETTINGS</a></li>
-								<li class="divider"></li>
-								<li><a tabindex="-1" href="#"><i class="glyphicon glyphicon-off"></i> LOGOUT</a></li>
-							</ul>
-						</li>
-					</ul>
-
-					<!-- left ->
-					<ul class="top-links list-inline">
-						<li class="hidden-xs"><a href="page-contact-1.html">CONTACT</a></li>
-						<li>
-							<a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#"><img class="flag-lang" src="assets/images/flags/us.png" width="16" height="11" alt="lang" /> ENGLISH</a>
-							<ul class="dropdown-langs dropdown-menu">
-								<li><a tabindex="-1" href="#"><img class="flag-lang" src="assets/images/flags/us.png" width="16" height="11" alt="lang" /> ENGLISH</a></li>
-								<li class="divider"></li>
-								<li><a tabindex="-1" href="#"><img class="flag-lang" src="assets/images/flags/de.png" width="16" height="11" alt="lang" /> GERMAN</a></li>
-								<li><a tabindex="-1" href="#"><img class="flag-lang" src="assets/images/flags/ru.png" width="16" height="11" alt="lang" /> RUSSIAN</a></li>
-								<li><a tabindex="-1" href="#"><img class="flag-lang" src="assets/images/flags/it.png" width="16" height="11" alt="lang" /> ITALIAN</a></li>
-							</ul>
-						</li>
-						<li>
-							<a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#">USD</a>
-							<ul class="dropdown-langs dropdown-menu">
-								<li><a tabindex="-1" href="#">USD</a></li>
-								<li class="divider"></li>
-								<li><a tabindex="-1" href="#">EUR</a></li>
-								<li><a tabindex="-1" href="#">GBP</a></li>
-							</ul>
-						</li>
-					</ul>
-
-				</div>
-			</div>
-			<!-- /Top Bar -->
-
-
-        <!--
-				AVAILABLE HEADER CLASSES
-
-				Default nav height: 96px
-				.header-md 		= 70px nav height
-				.header-sm 		= 60px nav height
-
-				.noborder 		= remove bottom border (only with transparent use)
-				.transparent	= transparent header
-				.translucent	= translucent header
-				.sticky			= sticky header
-				.static			= static header
-				.dark			= dark header
-				.bottom			= header on bottom
-
-				shadow-before-1 = shadow 1 header top
-				shadow-after-1 	= shadow 1 header bottom
-				shadow-before-2 = shadow 2 header top
-				shadow-after-2 	= shadow 2 header bottom
-				shadow-before-3 = shadow 3 header top
-				shadow-after-3 	= shadow 3 header bottom
-
-				.clearfix		= required for mobile menu, do not remove!
-
-				Example Usage:  class="clearfix sticky header-sm transparent noborder"
-			-->
+      
         <div id="header" class="sticky shadow-after-3 clearfix">
 
             <!-- TOP NAV -->
@@ -204,29 +129,7 @@
                     <a class="logo pull-left" href="index.html">
                         <img src="assets/images/logo.png" alt="" />
                     </a>
-
-                    <!--
-							Top Nav
-
-							AVAILABLE CLASSES:
-							submenu-dark = dark sub menu
-						-->
                     <div class="navbar-collapse pull-right nav-main-collapse collapse submenu-dark">
-
-
-                        <!--nav class="nav_type_3">
-									<ul id="menu-main" class="menu sf-js-enabled sf-shadow">
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-11">
-											<a href="http://mergetransit.com/">HOME</a></li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113"><a href="http://mergetransit.com/about-us/">ABOUT US</a></li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112"><a href="http://mergetransit.com/66-2/">SERVICES</a></li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="http://mergetransit.com/pricing/">PRICING</a></li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="http://mergetransit.com/factoring/">FACTORING</a></li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="http://mergetransit.com/contact-us/">CONTACT US</a></li>
-									</ul>
-									 <div id="nav_button"></div>
-								</nav-->
-
 
                         <nav class="nav-main">
 
@@ -237,15 +140,7 @@
                                 <li class="dropdown "><a class="dropdown-toggle" href="/pricing">PRICING</a></li>
                                 <li class="dropdown "><a class="dropdown-toggle" href="/factoring">FACTORING</a></li>
                                 <li class="dropdown "><a class="dropdown-toggle" href="/contactus">CONTACT US</a></li>
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" href="#">
-                                        LOGIN/REGISTER
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="login">LOGIN </a></li>
-                                        <li><a href="signin">REGISTER</a></li>
-                                    </ul>
-                                </li>
+                                <li class="dropdown"><a class="dropdown-toggle" href="/login">LOGIN </a> </li>
                                 <li>
                                     <a id="sidepanel_btn" href="#" class="fa fa-bars"></a>
                                 </li>
@@ -312,12 +207,12 @@
             <!-- SIDE NAV -->
             <ul class="list-group">
 
-                <li class="list-group-item"><a href="http://localhost/"><i class="fa fa-home" aria-hidden="true"></i>HOME</a></li>
-                <li class="list-group-item "><a href="http://localhost/aboutus.html">ABOUT US</a></li>
-                <li class="list-group-item "><a href="http://localhost/service.html">SERVICES</a></li>
-                <li class="list-group-item "><a href="#">PRICING</a></li>
-                <li class="list-group-item "><a href="#">FACTORING</a></li>
-                <li class="list-group-item "><a href="#">CONTACT US</a></li>
+                <li class="list-group-item"><a href="/"><i class="fa fa-home" aria-hidden="true"></i>HOME</a></li>
+                <li class="list-group-item "><a href="/aboutus">ABOUT US</a></li>
+                <li class="list-group-item "><a href="/service">SERVICES</a></li>
+                <li class="list-group-item "><a href="/pricing">PRICING</a></li>
+                <li class="list-group-item "><a href="/factoring">FACTORING</a></li>
+                <li class="list-group-item "><a href="contactus">CONTACT US</a></li>
             </ul>
             <!-- /SIDE NAV -->
 

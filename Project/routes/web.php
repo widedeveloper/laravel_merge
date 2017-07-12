@@ -11,5 +11,7 @@
 |
 */
 
+Auth::routes();
 Route::get('/','HomeController@index');
 Route::get('/{pageUrl}','HomeController@gotoTarget');
+Route::get('/home', 'HomeController@index')->name('home');

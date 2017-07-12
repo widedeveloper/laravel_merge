@@ -1,26 +1,7 @@
 
 @extends("layout.layout")
 @section("contents")
-        <section class="page-header page-header-xs">
-            <div class="container">
-
-                <h1>LOGIN</h1>
-
-                <!-- breadcrumbs -->
-                <ol class="breadcrumb">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li class="active">Login</li>
-                </ol>
-                <!-- /breadcrumbs -->
-
-            </div>
-        </section>
-        <!-- /PAGE HEADER -->
-
-
-
-
+       
         <!-- -->
         <section>
             <div class="container">
@@ -30,9 +11,9 @@
                     <div class="col-md-6 col-md-offset-3">
 
                         <!-- ALERT -->
-                        <div class="alert alert-mini alert-danger margin-bottom-30">
+                        <!--div class="alert alert-mini alert-danger margin-bottom-30">
                             <strong>Oh snap!</strong> Login Incorrect!
-                        </div>
+                        </div-->
                         <!-- /ALERT -->
 
                         <div class="box-static box-border-top padding-30">
@@ -40,17 +21,28 @@
                                 <h2 class="size-20">I'm a returning customer</h2>
                             </div>
 
-                            <form class="nomargin" method="post" action="#" autocomplete="off">
+                            <form class="nomargin" method="post" action="{{url('/login')}}" autocomplete="off">
+                              {{ csrf_field() }}
                                 <div class="clearfix">
 
                                     <!-- Email -->
-                                    <div class="form-group">
+                                    <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
                                         <input type="text" name="email" class="form-control" placeholder="Email" required="">
+                                         @if ($errors->has('email'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('email') }}</strong>
+                                            </span>
+                                        @endif
                                     </div>
 
                                     <!-- Password -->
-                                    <div class="form-group">
+                                    <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                                         <input type="password" name="password" class="form-control" placeholder="Password" required="">
+                                         @if ($errors->has('password'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('password') }}</strong>
+                                            </span>
+                                        @endif
                                     </div>
 
                                 </div>
@@ -79,7 +71,7 @@
                         </div>
 
                         <div class="margin-top-30 text-center">
-                            <a href="signin.html"><strong>Create Account</strong></a>
+                            <a href="/register"><strong>Create Account</strong></a>
 
                         </div>
 
