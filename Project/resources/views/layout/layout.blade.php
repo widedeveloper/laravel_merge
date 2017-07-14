@@ -140,7 +140,39 @@
                                 <li class="dropdown "><a class="dropdown-toggle" href="/pricing">PRICING</a></li>
                                 <li class="dropdown "><a class="dropdown-toggle" href="/factoring">FACTORING</a></li>
                                 <li class="dropdown "><a class="dropdown-toggle" href="/contactus">CONTACT US</a></li>
-                                <li class="dropdown"><a class="dropdown-toggle" href="/login">LOGIN </a> </li>
+                                <li class="dropdown"><!-- PAGES -->
+                                @if(Auth::guest())
+                                    <a class="dropdown-toggle" href="{{url('login')}}">
+                                        <i class="fa fa-sign-in">&nbsp;</i>SIGN IN
+                                    </a>
+                                    @else
+                                    <a class="dropdown-toggle" href="#">
+                                        <i class="fa fa-user"></i> {{Auth::user()->email}}
+                                    </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown">
+                                                <a class="dropdown-toggle" href="{{url('profile/edit')}}">
+                                                    <i class="fa fa-user"></i> Edit Profile
+                                                </a>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a class="dropdown-toggle" href="{{url('profile/change_email')}}">
+                                                    <i class="fa fa-lock"></i> Change Email
+                                                </a>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a class="dropdown-toggle" href="{{url('profile/change_password')}}">
+                                                    <i class="fa fa-lock"></i> Change Password
+                                                </a>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a class="dropdown-toggle" href="{{url('logout')}}">
+                                                    <i class="fa fa-sign-out"></i> Log Out
+                                                </a>
+                                            </li>
+                                        </ul>
+                                @endif
+                                </li>
                                 <li>
                                     <a id="sidepanel_btn" href="#" class="fa fa-bars"></a>
                                 </li>

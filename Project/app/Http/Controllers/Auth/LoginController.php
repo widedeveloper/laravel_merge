@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
-use Auth;
+use Illuminate\Support\Facades\Auth;
+use App\User;
 class LoginController extends Controller
 {
     /*
@@ -43,21 +45,45 @@ class LoginController extends Controller
         return view ("login");
     }
 
-    public function login(Request $request){
+     public function login(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|string|email',
+            'password' => 'required|string|min:6'
+        ]);
 
-            $email = $request->email;
-            $password = $request->password;
-            
-            $this->authenticate($email,$password);
-           
+        $user = User::where (['email' => $request->email,'is_active' =>1])->get()->count();
 
+      
+        if($validator->passes()) {
+            if($user <= 0)
+            {
+              
+                return redirect()->back()->withInput($request->all())->with("status"," Email or password is wrong.");
+            }
+            if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+                return redirect()->intended("/");
+            }else{
+                return redirect()->back()->withInput($request->only("email", "password"))->with('status','Email or Password is wrong');
+            }
+        }else{
+            return redirect()->back()->withInput($request->only("email", "password"))->withErrors($validator);
+        }
+       
     }
 
       public function authenticate($email,$password)
     {
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
             // Authentication passed...
-            return redirect()->intended(url('/index'));
+            return redirect()->intended($this->redirectPath());
         }
+    }
+
+    public function logout() {
+
+        Auth::logout();
+
+        return view("login");
     }
 }

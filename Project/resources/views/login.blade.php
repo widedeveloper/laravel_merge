@@ -10,11 +10,15 @@
 
                     <div class="col-md-6 col-md-offset-3">
 
-                        <!-- ALERT -->
-                        <!--div class="alert alert-mini alert-danger margin-bottom-30">
-                            <strong>Oh snap!</strong> Login Incorrect!
-                        </div-->
-                        <!-- /ALERT -->
+                      
+                         @if($status = Session::get("status"))
+                            <div class="alert alert-info form-group">
+                                <span class="help-block">
+                                    <strong>{{$status}}</strong>
+                                </span>
+                            </div><br>
+                        @endif
+                     
 
                         <div class="box-static box-border-top padding-30">
                             <div class="box-title margin-bottom-30">
@@ -27,7 +31,7 @@
 
                                     <!-- Email -->
                                     <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
-                                        <input type="text" name="email" class="form-control" placeholder="Email" required="">
+                                        <input type="text" name="email" class="form-control" placeholder="Email" required="" value="{{ old('email') }}">
                                          @if ($errors->has('email'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('email') }}</strong>

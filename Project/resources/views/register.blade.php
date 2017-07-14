@@ -9,14 +9,11 @@
                     <div class="col-md-6 col-sm-6 col-md-offset-3 col-sm-offset-3">
 
                         <!-- ALERT -->
-                         @if ($errors->has('email'))
+                         @if($errors->has("wrong"))
                             <span class="help-block">
-                                <strong>{{ $errors->first('email') }}</strong>
+                                <strong>{{$errors->first("wrong")}}</strong>
                             </span>
 
-                            <div class="alert alert-mini alert-danger margin-bottom-30">
-                                <strong>Oh snap!</strong> Password do not match!
-                            </div>
                         @endif
                         
                         <!-- /ALERT -->

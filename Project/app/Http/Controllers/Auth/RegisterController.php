@@ -99,4 +99,7 @@ class RegisterController extends Controller
         
         
     }
+
+
+    // Auth::user()->firstname
 }
